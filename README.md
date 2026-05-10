@@ -70,3 +70,8 @@ See `examples/repo-hook.sh`.
 ```bash
 python3 -m wsl_system_guard.daemon --once
 ```
+
+## CI and release
+
+- CI runs on push and pull requests using Python 3.10 to 3.12.
+- Tagged releases in the form vX.Y.Z automatically build and publish release artifacts.
