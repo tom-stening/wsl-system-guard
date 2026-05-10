@@ -1,0 +1,12 @@
+[Unit]
+Description=System-wide WSL memory pressure guard
+After=default.target
+
+[Service]
+Type=simple
+ExecStart={{GUARD_BIN}} --config {{CONFIG_PATH}} --state-dir {{STATE_DIR}}
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
